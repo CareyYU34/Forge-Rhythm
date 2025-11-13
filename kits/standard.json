@@ -1,0 +1,190 @@
+{
+  "35": {
+    "name": "Acoustic Bass Drum",
+    "file": ["35_Standard Kick 2.wav"]
+  },
+  "36": {
+    "name": "Bass Drum 1",
+    "file": ["36_Standard Kick 3.wav"]
+  },
+  "37": {
+    "name": "Side Stick",
+    "file": ["37_Jazz Rim Shot.wav", "37_Rim Shot.wav"]
+  },
+  "38": {
+    "name": "Acoustic Snare",
+    "file": ["38_Standard Snare 1_v1.wav"]
+  },
+  "39": {
+    "name": "Hand Clap",
+    "file": ["39_Hand Clap.wav"]
+  },
+  "40": {
+    "name": "Electric Snare",
+    "file": ["40_Standard Snare 3.wav", "40_Jazz Snare Hard.wav", "40_Jazz Snare Soft 1.wav"]
+  },
+  "41": {
+    "name": "Low Floor Tom",
+    "file": ["41_43_Standard Tom 5.wav"]
+  },
+  "42": {
+    "name": "Closed Hi-Hat",
+    "file": ["42_Hi-Hat Closed Soft.wav", "42_Hi-Hat Closed Hard.wav"]
+  },
+  "43": {
+    "name": "High Floor Tom",
+    "file": ["41_43_Standard Tom 5.wav"]
+  },
+  "44": {
+    "name": "Pedal Hi-Hat",
+    "file": ["44_Hi-Hat Pedal.wav", "44_Dead Air.wav"]
+  },
+  "45": {
+    "name": "Low Tom",
+    "file": ["45_Standard Tom 4.wav"]
+  },
+  "46": {
+    "name": "Open Hi-Hat",
+    "file": ["46_Hi-Hat Open Attack.wav", "46_Hi-Hat Open.wav"]
+  },
+  "47": {
+    "name": "Low-Mid Tom",
+    "file": ["47_Standard Tom 3.wav"]
+  },
+  "48": {
+    "name": "Hi-Mid Tom",
+    "file": ["48_Standard Tom 2.wav"]
+  },
+  "49": {
+    "name": "Crash Cymbal 1",
+    "file": ["49_57_Crash Cymbal.wav", "51_59_Ride Cymbal.wav"]
+  },
+  "50": {
+    "name": "High Tom",
+    "file": ["50_Standard Tom 1.wav"]
+  },
+  "51": {
+    "name": "Ride Cymbal 1",
+    "file": ["51_59_Ride Cymbal.wav"]
+  },
+  "52": {
+    "name": "Chinese Cymbal",
+    "file": ["52_Chinese Cymbal.wav"]
+  },
+  "53": {
+    "name": "Ride Bell",
+    "file": ["53_Ride Bell.wav"]
+  },
+  "54": {
+    "name": "Tambourine",
+    "file": ["54_Tambourine.wav"]
+  },
+  "55": {
+    "name": "Splash Cymbal",
+    "file": ["55_Splash Cymbal.wav"]
+  },
+  "56": {
+    "name": "Cowbell",
+    "file": ["56_Cowbell.wav"]
+  },
+  "57": {
+    "name": "Crash Cymbal 2",
+    "file": ["49_57_Crash Cymbal.wav"]
+  },
+  "58": {
+    "name": "Vibra Slap",
+    "file": ["58_Vibra Slap.wav"]
+  },
+  "59": {
+    "name": "Ride Cymbal 2",
+    "file": ["51_59_Ride Cymbal.wav"]
+  },
+  "60": {
+    "name": "High Bongo",
+    "file": ["60_Bongo Rim.wav"]
+  },
+  "61": {
+    "name": "Low Bongo",
+    "file": ["61_Bongo Tone.wav"]
+  },
+  "62": {
+    "name": "Mute High Conga",
+    "file": ["62_Conga High Muted.wav"]
+  },
+  "63": {
+    "name": "Open High Conga",
+    "file": ["63_Conga High Open.wav"]
+  },
+  "64": {
+    "name": "Low Conga",
+    "file": ["64_Tumba Low.wav"]
+  },
+  "65": {
+    "name": "High Timbale",
+    "file": ["65_Timbale Rim.wav"]
+  },
+  "66": {
+    "name": "Low Timbale",
+    "file": ["66_Timbale Low.wav"]
+  },
+  "67": {
+    "name": "High Agogo",
+    "file": ["67_Agogo.wav"]
+  },
+  "68": {
+    "name": "Low Agogo",
+    "file": ["68_Agogo-xt.wav"]
+  },
+  "69": {
+    "name": "Cabasa",
+    "file": ["69_Cabasa.wav"]
+  },
+  "70": {
+    "name": "Maracas",
+    "file": ["70_Maracas.wav"]
+  },
+  "71": {
+    "name": "Short Whistle",
+    "file": ["71_Whistle Short.wav"]
+  },
+  "72": {
+    "name": "Long Whistle",
+    "file": ["72_Whistle Long.wav"]
+  },
+  "73": {
+    "name": "Short Guiro",
+    "file": ["73_Guiro Short.wav"]
+  },
+  "74": {
+    "name": "Long Guiro",
+    "file": ["74_Guiro Long.wav"]
+  },
+  "75": {
+    "name": "Claves",
+    "file": ["75_Claves.wav"]
+  },
+  "76": {
+    "name": "High Wood Block",
+    "file": ["0to108_76_Wood Block Med.wav"]
+  },
+  "77": {
+    "name": "Low Wood Block",
+    "file": ["77_Wood Block Hard.wav"]
+  },
+  "78": {
+    "name": "Mute Cuica",
+    "file": ["78_Cuica Mute.wav"]
+  },
+  "79": {
+    "name": "Open Cuica",
+    "file": ["79_Cuica Open.wav"]
+  },
+  "80": {
+    "name": "Mute Triangle",
+    "file": ["80_81_Triangle (Perc).wav"]
+  },
+  "81": {
+    "name": "Open Triangle",
+    "file": ["80_81_Triangle (Perc).wav"]
+  }
+}

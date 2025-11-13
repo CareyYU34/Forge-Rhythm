@@ -18,98 +18,93 @@
         <link href="./activities.css" rel="stylesheet" />
     </head>
     <body>
-        <header class="navbar navbar-expand-lg sticky-top" aria-label="Primary">
+        <header class="navbar navbar-expand-lg sticky-top">
             <div class="container py-2 d-flex justify-content-between align-items-center">
-                <a class="navbar-brand text-light brand-badge" href="#">
+                <a class="navbar-brand text-light brand-badge fw-semibold" href="#">
                     <span class="brand-dot"></span> Forge Rhythm
                 </a>
+                <div class="text-secondary small">
+                    SoundFont 狀態
+                    <span id="soundStatus" class="status-light"></span>
+                </div>
             </div>
-        </header>   
+        </header>
         <main>
             <div class="container">
-                <section class="hero glass-card p-4 p-md-5 mx-auto" style="max-width: 920px;">
-                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
-                        <div>
-                        <h1 class="display-6 fw-semibold mt-3 mb-2">Midi 播放區</h1>
-                        </div>
-                    </div>
-
-                    <hr class="my-4 divider-strong" />
-
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-md-10 col-lg-8">
-                            <div class="inner-card card border-0 shadow-sm p-4">
-                                <h2 class="h5 mb-3 fw-semibold">Centered Content</h2>
-                                <p class="mb-3">
-                                Put your <strong>MD→Audio</strong> component here. The card is horizontally and vertically centered.
-                                </p>
-
-                                <div class="d-grid d-sm-flex gap-2">
-                                <input
-                                    type="file"
-                                    id="midiFileInput"
-                                    accept=".mid,.midi"
-                                    style="display:none"
-                                />
-
-                                
-                                <button class="btn btn-primary" id="loadMidiBtn">
-                                    <i class="bi bi-file-earmark-music me-2"></i>Load MD
+                <section class="hero glass-card p-4 p-md-5 mx-auto text-center" style="max-width: 720px">
+                    <h1 class="display-6 fw-semibold mb-3">MIDI 播放控制台</h1>
+                    <p class="text-secondary mb-4">
+                        請載入 MIDI 檔並選擇鼓組音色進行播放測試。
+                    </p>
+                    <div class="inner-card card border-0 shadow-sm p-4">
+                        <div class="d-grid gap-3">
+                            <input type="file" id="midiFileInput" accept=".mid,.midi" style="display: none" />
+                            <div class="d-flex flex-wrap justify-content-center gap-3">
+                                <button class="btn btn-primary btn-glow" id="loadMidiButton">
+                                    <i class="bi bi-file-earmark-music me-2"></i> 載入 MIDI
                                 </button>
 
-                                <button class="btn btn-outline-light" id="renderBtn">
-                                    Render Audio
-                                </button>
-                                </div>
+                                <select id="selectDrumKit" class="form-select bg-dark text-light" style="max-width: 200px">
+                                    <option value="standardKit">標準</option>
+                                    <!-- <option value="roomKit">流行</option>
+                                    <option value="powerKit">搖滾</option>
+                                    <option value="jazzKit">爵士</option>
+                                    <option value="electronicKit">電子</option> -->
+                                </select>
 
-                                
-                                <div id="fileInfo" class="mt-3 text-white small"></div>
+                                <button class="btn btn-outline-light btn-glow" id="playSoundButton" hidden>
+                                    <i class="bi bi-play-fill me-1"></i> 播放
+                                </button>
                             </div>
+                            <div id="fileInfo">尚未載入檔案</div>
                         </div>
-                    </div>
-
-                    <div class="mt-4">
-                        <details class="text-secondary">
-                            <summary class="link-muted">Future: Score Output & Dashboard Modules</summary>
-                            <ul class="mt-2">
-                                <li>Score engraving (MusicXML / MIDI → Notation)</li>
-                                <li>Style-aware drum pattern recommendation</li>
-                                <li>Customizable widgets: transport, mixer, kit chooser, metronome</li>
-                            </ul>
-                        </details>  
-                    </div>
+                    </div>  
                 </section>
             </div>
-        </main>
+        </main>        
         <footer class="py-3 small text-center">
             <span>© <span id="year"></span> Forge Rhythm</span>
         </footer>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+        <!-- Tone.js MIDI -->
+        <script src="https://unpkg.com/@tonejs/midi"></script>
+        <!-- My JS -->
+        <script src="./js/player.js"></script>
         <script>
-            document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
-        <script type="module">
-            import { Midi } from "https://cdn.skypack.dev/@tonejs/midi"
+            const player = new MidiPlayer();
+            const midiInput = document.getElementById("midiFileInput");
+            const selectDrumKit = document.getElementById("selectDrumKit"); //還未製作
+            const playSoundButton = document.getElementById("playSoundButton");
+            const midiInfo = document.getElementById("fileInfo");
 
-            const loadBtn = document.getElementById("loadMidiBtn");
-            const input = document.getElementById("midiFileInput");
-            const info = document.getElementById("fileInfo");
+            // 載入 MIDI
+            loadMidiButton.addEventListener("click", function () {
+                midiInput.click();
+            });
 
-            loadBtn.addEventListener("click", () => input.click());
-
-            input.addEventListener("change", async (e) => {
-                const file = e.target.files[0];
+            midiInput.addEventListener("change", async (event) => {
+                const file = event.target.files[0];
                 if (!file) return;
 
-                info.textContent = `載入中：${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+                midiInfo.textContent = `載入中：${file.name}`;
 
                 const arrayBuffer = await file.arrayBuffer();
-                const midi = new Midi(arrayBuffer)
+                const midiData = new Midi(arrayBuffer);
 
-                console.log("MIDI Parsed:", midi);
-                console.log("Track count:", midi.tracks.length);
-                console.log("First track notes:", midi.tracks[0]?.notes ?? []);
-                info.textContent = `已載入：${file.name}`;
+                await player.prepareAudio();
+                player.onMidiLoaded(midiData);
+                
+                midiInfo.textContent = `已載入：${file.name}`;
+                playSoundButton.hidden = false;
+
             });
+
+            //播放
+            playSoundButton.addEventListener("click", function () {
+                player.play();
+            });
+
         </script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

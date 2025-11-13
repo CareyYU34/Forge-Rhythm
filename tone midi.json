@@ -1,0 +1,258 @@
+{
+  "header": {
+    "keySignatures": [
+      {
+        "key": "C",
+        "scale": "major",
+        "ticks": 0
+      }
+    ],
+    "meta": [],
+    "name": "Drum Kit",
+    "ppq": 480,
+    "tempos": [
+      {
+        "bpm": 100,
+        "ticks": 0
+      }
+    ],
+    "timeSignatures": [
+      {
+        "ticks": 0,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "measures": 0
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "channel": 9,
+      "controlChanges": {
+        "7": [
+          {
+            "number": 7,
+            "ticks": 0,
+            "time": 0,
+            "value": 0.7874015748031497
+          }
+        ],
+        "10": [
+          {
+            "number": 10,
+            "ticks": 0,
+            "time": 0,
+            "value": 0.5039370078740157
+          }
+        ],
+        "91": [
+          {
+            "number": 91,
+            "ticks": 0,
+            "time": 0,
+            "value": 0
+          }
+        ],
+        "93": [
+          {
+            "number": 93,
+            "ticks": 0,
+            "time": 0,
+            "value": 0
+          }
+        ],
+        "121": [
+          {
+            "number": 121,
+            "ticks": 0,
+            "time": 0,
+            "value": 0
+          }
+        ]
+      },
+      "pitchBends": [],
+      "instrument": {
+        "family": "drums",
+        "number": 0,
+        "name": "standard kit"
+      },
+      "name": "Drum Kit",
+      "notes": [
+        {
+          "duration": 0.59875,
+          "durationTicks": 479,
+          "midi": 44,
+          "name": "G#2",
+          "ticks": 0,
+          "time": 0,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.59875,
+          "durationTicks": 479,
+          "midi": 36,
+          "name": "C2",
+          "ticks": 480,
+          "time": 0.6,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.5987500000000001,
+          "durationTicks": 479,
+          "midi": 41,
+          "name": "F2",
+          "ticks": 960,
+          "time": 1.2,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.5987500000000003,
+          "durationTicks": 479,
+          "midi": 38,
+          "name": "D2",
+          "ticks": 1440,
+          "time": 1.7999999999999998,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.5987499999999999,
+          "durationTicks": 479,
+          "midi": 47,
+          "name": "B2",
+          "ticks": 1920,
+          "time": 2.4,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.5987499999999999,
+          "durationTicks": 479,
+          "midi": 50,
+          "name": "D3",
+          "ticks": 2400,
+          "time": 3,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.5987499999999999,
+          "durationTicks": 479,
+          "midi": 51,
+          "name": "D#3",
+          "ticks": 2880,
+          "time": 3.5999999999999996,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.5987499999999999,
+          "durationTicks": 479,
+          "midi": 42,
+          "name": "F#2",
+          "ticks": 3360,
+          "time": 4.2,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.5987499999999999,
+          "durationTicks": 479,
+          "midi": 46,
+          "name": "A#2",
+          "ticks": 3840,
+          "time": 4.8,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.5987500000000008,
+          "durationTicks": 479,
+          "midi": 49,
+          "name": "C#3",
+          "ticks": 4320,
+          "time": 5.3999999999999995,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.1487500000000006,
+          "durationTicks": 119,
+          "midi": 36,
+          "name": "C2",
+          "ticks": 5760,
+          "time": 7.199999999999999,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.14874999999999972,
+          "durationTicks": 119,
+          "midi": 36,
+          "name": "C2",
+          "ticks": 5880,
+          "time": 7.35,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.14874999999999972,
+          "durationTicks": 119,
+          "midi": 36,
+          "name": "C2",
+          "ticks": 6000,
+          "time": 7.5,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.1487500000000006,
+          "durationTicks": 119,
+          "midi": 36,
+          "name": "C2",
+          "ticks": 6120,
+          "time": 7.6499999999999995,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.2987499999999992,
+          "durationTicks": 239,
+          "midi": 36,
+          "name": "C2",
+          "ticks": 6240,
+          "time": 7.8,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.29875000000000007,
+          "durationTicks": 239,
+          "midi": 36,
+          "name": "C2",
+          "ticks": 6480,
+          "time": 8.1,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.29875000000000007,
+          "durationTicks": 239,
+          "midi": 36,
+          "name": "C2",
+          "ticks": 6720,
+          "time": 8.4,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.29875000000000007,
+          "durationTicks": 239,
+          "midi": 36,
+          "name": "C2",
+          "ticks": 6960,
+          "time": 8.7,
+          "velocity": 0.6299212598425197
+        },
+        {
+          "duration": 0.598749999999999,
+          "durationTicks": 479,
+          "midi": 36,
+          "name": "C2",
+          "ticks": 7200,
+          "time": 9,
+          "velocity": 0.6299212598425197
+        }
+      ],
+      "endOfTrackTicks": 7680
+    }
+  ]
+}
