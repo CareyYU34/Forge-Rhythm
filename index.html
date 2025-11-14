@@ -21,12 +21,8 @@
         <header class="navbar navbar-expand-lg sticky-top">
             <div class="container py-2 d-flex justify-content-between align-items-center">
                 <a class="navbar-brand text-light brand-badge fw-semibold" href="#">
-                    <span class="brand-dot"></span> Forge Rhythm
+                    <i class="bi bi-soundwave"></i><span class="brand-dot"></span> Forge Rhythm
                 </a>
-                <div class="text-secondary small">
-                    SoundFont 狀態
-                    <span id="soundStatus" class="status-light"></span>
-                </div>
             </div>
         </header>
         <main>
@@ -52,8 +48,11 @@
                                     <option value="electronicKit">電子</option> -->
                                 </select>
 
-                                <button class="btn btn-outline-light btn-glow" id="playSoundButton" hidden>
-                                    <i class="bi bi-play-fill me-1"></i> 播放
+                                <button class="btn btn-outline-success btn-glow" id="playSoundButton" hidden>
+                                    <i class="bi bi-play-circle-fill me-1"></i> 播放
+                                </button>
+                                <button class="btn btn-outline-danger btn-glow" id="stopSoundButton" hidden>
+                                    <i class="bi bi-pause-circle-fill me-1"></i> 暫停
                                 </button>
                             </div>
                             <div id="fileInfo">尚未載入檔案</div>
@@ -76,6 +75,7 @@
             const midiInput = document.getElementById("midiFileInput");
             const selectDrumKit = document.getElementById("selectDrumKit"); //還未製作
             const playSoundButton = document.getElementById("playSoundButton");
+            const stopSoundButton = document.getElementById("stopSoundButton");
             const midiInfo = document.getElementById("fileInfo");
 
             // 載入 MIDI
@@ -92,17 +92,28 @@
                 const arrayBuffer = await file.arrayBuffer();
                 const midiData = new Midi(arrayBuffer);
 
-                await player.prepareAudio();
                 player.onMidiLoaded(midiData);
+                await player.prepareAudio();
                 
-                midiInfo.textContent = `已載入：${file.name}`;
+                midiInfo.textContent = `已載入：${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+
                 playSoundButton.hidden = false;
+                stopSoundButton.hidden = true;
 
             });
 
             //播放
             playSoundButton.addEventListener("click", function () {
+                playSoundButton.hidden = true;
+                stopSoundButton.hidden = false;
                 player.play();
+            });
+
+            //暫停
+            stopSoundButton.addEventListener("click", function () {
+                playSoundButton.hidden = false;
+                stopSoundButton.hidden = true;
+                player.pause();
             });
 
         </script>

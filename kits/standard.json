@@ -45,7 +45,7 @@
   },
   "46": {
     "name": "Open Hi-Hat",
-    "file": ["46_Hi-Hat Open Attack.wav", "46_Hi-Hat Open.wav"]
+    "file": ["46_Hi-Hat Open.wav", "46_Hi-Hat Open Attack.wav"]
   },
   "47": {
     "name": "Low-Mid Tom",
