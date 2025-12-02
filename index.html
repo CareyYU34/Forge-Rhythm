@@ -27,11 +27,8 @@
         </header>
         <main>
             <div class="container">
-                <section class="hero glass-card p-4 p-md-5 mx-auto text-center" style="max-width: 720px">
-                    <h1 class="display-6 fw-semibold mb-3">MIDI 播放控制台</h1>
-                    <p class="text-secondary mb-4">
-                        請載入 MIDI 檔並選擇鼓組音色進行播放測試。
-                    </p>
+                <section class="hero glass-card p-4 p-md-5 mx-auto text-center" style="max-width: 720px;">
+                    <h1 class="display-6 fw-semibold mb-3" style="max-height: 100px;">MIDI 播放控制台</h1>
                     <div class="inner-card card border-0 shadow-sm p-4">
                         <div class="d-grid gap-3">
                             <input type="file" id="midiFileInput" accept=".mid,.midi" style="display: none" />
@@ -47,7 +44,6 @@
                                     <option value="jazzKit">爵士</option>
                                     <option value="electronicKit">電子</option> -->
                                 </select>
-
                                 <button class="btn btn-outline-success btn-glow" id="playSoundButton" hidden>
                                     <i class="bi bi-play-circle-fill me-1"></i> 播放
                                 </button>
@@ -60,6 +56,9 @@
                     </div>  
                 </section>
             </div>
+            <!-- <div class="container mt-4">
+                <div id="notationContainer" class="vexflow-panel p-4 shadow-sm rounded"></div>
+            </div>         -->
         </main>        
         <footer class="py-3 small text-center">
             <span>© <span id="year"></span> Forge Rhythm</span>
@@ -68,10 +67,14 @@
 
         <!-- Tone.js MIDI -->
         <script src="https://unpkg.com/@tonejs/midi"></script>
+        <!-- vexflow -->
+        <script src="https://cdn.jsdelivr.net/npm/vexflow@4.2.2/build/cjs/vexflow.js"></script>
         <!-- My JS -->
-        <script src="./js/player.js"></script>
+        <!-- <script src="./js/player.js"></script>
+        <script src="./js/notation.js"></script> -->
         <script>
             const player = new MidiPlayer();
+            const notation =  new editNotation();
             const midiInput = document.getElementById("midiFileInput");
             const selectDrumKit = document.getElementById("selectDrumKit"); //還未製作
             const playSoundButton = document.getElementById("playSoundButton");
@@ -95,7 +98,7 @@
                 const midi = new Midi(arrayBuffer);
                 await player.onMidiLoaded(midi);
                 await player.prepareAudio()
-
+                notation.drawFromMidi(midi);
                 midiInfo.textContent = `已載入：${file.name}`;
 
                 playSoundButton.hidden = false;

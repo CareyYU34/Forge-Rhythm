@@ -1,18 +1,18 @@
 {
   "35": {
-    "name": "Acoustic Bass Drum",
+    "name": "Acoustic Bass Drum (often)",
     "file": ["35_Standard Kick 2.wav"]
   },
   "36": {
-    "name": "Bass Drum 1",
+    "name": "Bass Drum 1 (often)",
     "file": ["36_Standard Kick 3.wav"]
   },
   "37": {
-    "name": "Side Stick",
+    "name": "Side Stick (often)",
     "file": ["37_Jazz Rim Shot.wav", "37_Rim Shot.wav"]
   },
   "38": {
-    "name": "Acoustic Snare",
+    "name": "Acoustic Snare (often)",
     "file": ["38_Standard Snare 1_v1.wav"]
   },
   "39": {
@@ -24,11 +24,11 @@
     "file": ["40_Standard Snare 3.wav", "40_Jazz Snare Hard.wav", "40_Jazz Snare Soft 1.wav"]
   },
   "41": {
-    "name": "Low Floor Tom",
+    "name": "Low Floor Tom (often)",
     "file": ["41_43_Standard Tom 5.wav"]
   },
   "42": {
-    "name": "Closed Hi-Hat",
+    "name": "Closed Hi-Hat (often)",
     "file": ["42_Hi-Hat Closed Soft.wav", "42_Hi-Hat Closed Hard.wav"]
   },
   "43": {
@@ -36,7 +36,7 @@
     "file": ["41_43_Standard Tom 5.wav"]
   },
   "44": {
-    "name": "Pedal Hi-Hat",
+    "name": "Pedal Hi-Hat (often)",
     "file": ["44_Hi-Hat Pedal.wav", "44_Dead Air.wav"]
   },
   "45": {
@@ -44,11 +44,11 @@
     "file": ["45_Standard Tom 4.wav"]
   },
   "46": {
-    "name": "Open Hi-Hat",
+    "name": "Open Hi-Hat (often)",
     "file": ["46_Hi-Hat Open.wav", "46_Hi-Hat Open Attack.wav"]
   },
   "47": {
-    "name": "Low-Mid Tom",
+    "name": "Low-Mid Tom (often)",
     "file": ["47_Standard Tom 3.wav"]
   },
   "48": {
@@ -56,31 +56,31 @@
     "file": ["48_Standard Tom 2.wav"]
   },
   "49": {
-    "name": "Crash Cymbal 1",
+    "name": "Crash Cymbal 1 (often)",
     "file": ["49_57_Crash Cymbal.wav", "51_59_Ride Cymbal.wav"]
   },
   "50": {
-    "name": "High Tom",
+    "name": "High Tom (often)",
     "file": ["50_Standard Tom 1.wav"]
   },
   "51": {
-    "name": "Ride Cymbal 1",
+    "name": "Ride Cymbal 1 (often)",
     "file": ["51_59_Ride Cymbal.wav"]
   },
   "52": {
-    "name": "Chinese Cymbal",
+    "name": "Chinese Cymbal (often)",
     "file": ["52_Chinese Cymbal.wav"]
   },
   "53": {
-    "name": "Ride Bell",
-    "file": ["53_Ride Bell.wav"]
+    "name": "Ride Bell (often)",
+    "file": ["53_ride cymbal bell no sf.wav", "53_Ride Bell.wav"]
   },
   "54": {
     "name": "Tambourine",
     "file": ["54_Tambourine.wav"]
   },
   "55": {
-    "name": "Splash Cymbal",
+    "name": "Splash Cymbal (often)",
     "file": ["55_Splash Cymbal.wav"]
   },
   "56": {
@@ -88,7 +88,7 @@
     "file": ["56_Cowbell.wav"]
   },
   "57": {
-    "name": "Crash Cymbal 2",
+    "name": "Crash Cymbal 2 (often)",
     "file": ["49_57_Crash Cymbal.wav"]
   },
   "58": {
